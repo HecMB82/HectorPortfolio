@@ -1,0 +1,1043 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+.escritorio {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fondo_escritorio {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    overflow-x: clip;
+
+    background-image: url("../img/fondo_escritorio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #08658b;
+}
+
+.barra_tareas {
+    flex-shrink: 0;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    background-color: #07152F;
+    border-top: 2px solid #D9BD7A;
+}
+
+.nombre_sistema {
+    color: #F1EBD9;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    line-height: 16px;
+}
+
+.iconos_escritorio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: block;
+    pointer-events: none;
+}
+
+.iconos_escritorio .acceso_directo {
+    position: absolute;
+    margin: 0;
+    touch-action: none;
+    pointer-events: auto;
+    user-select: none;
+    cursor: grab;
+}
+
+.iconos_escritorio .acceso_directo:active {
+    cursor: grabbing;
+}
+
+.iconos_escritorio .acceso_directo img {
+    pointer-events: none;
+    user-select: none;
+}
+
+.acceso_directo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 90px;
+    flex-shrink: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.acceso_directo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.acceso_directo {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.acceso_directo:hover {
+    background-color: rgba(22, 188, 235, 0.20);
+    border-color: rgba(22, 188, 235, 0.60);
+}
+
+.acceso_directo:active {
+    background-color: rgba(22, 188, 235, 0.40);
+}
+
+
+/* BOTÓN HEC.OS */
+
+.boton_inicio {
+    padding: 5px 12px;
+    background-color: #234A58;
+    border: 1px solid #D9BD7A;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono_inicio {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.boton_inicio:hover {
+    background-color: #315D6B;
+}
+
+.informacion_sistema {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #F1EBD9;
+    font-family: monospace;
+}
+
+
+.tiempo_sistema {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: transparent;
+    border: none;
+    padding: 6px;
+
+    color: #F1EBD9;
+    font-family: monospace;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.tiempo_sistema:hover {
+    background-color: #234A58;
+}
+
+.tiempo_sistema:focus-visible {
+    outline: 2px solid #D9BD7A;
+}
+
+.reloj_sistema {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 12px;
+    background-color: #152D3C;
+    border: 1px solid #58747A;
+    font-size: 13px;
+}
+
+/* ICONOS COMO BOTONES */
+
+button.acceso_directo {
+    background: transparent;
+    cursor: pointer;
+}
+
+button.acceso_directo:hover {
+    background-color: rgba(22, 188, 235, 0.20);
+}
+
+/* VENTANAS DE HEC.OS */
+
+.ventana {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(600px, 90%);
+    background-color: #152D3C;
+    border: 2px solid #D9BD7A;
+    color: #F1EBD9;
+    font-family: monospace;
+
+    z-index: 10;
+}
+
+.ventana[hidden] {
+    display: none;
+}
+
+.barra_ventana {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 12px;
+    background-color: #234A58;
+    border-bottom: 2px solid #D9BD7A;
+    font-weight: bold;
+}
+
+.cerrar_ventana {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #D9BD7A;
+    border: 2px solid #07152F;
+    color: #07152F;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.cerrar_ventana:hover {
+    background-color: #F1EBD9;
+}
+
+.contenido_ventana {
+    padding: 20px;
+}
+
+
+/* CONTROLES DE VENTANA */
+
+.controles_ventana {
+    display: flex;
+    gap: 5px;
+}
+
+.minimizar_ventana {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #D9BD7A;
+    border: 2px solid #07152F;
+    color: #07152F;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.minimizar_ventana:hover {
+    background-color: #F1EBD9;
+}
+
+/* VENTANAS ARRASTRABLES */
+
+.barra_ventana {
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+.barra_ventana:active {
+    cursor: grabbing;
+}
+
+.controles_ventana {
+    cursor: default;
+}
+
+/* BOTONES EN LA BARRA DE TAREAS */
+
+.ventanas_barra {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 15px;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+.boton_ventana_barra {
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #234A58;
+    border: 1px solid #58747A;
+
+    cursor: pointer;
+}
+
+.boton_ventana_barra img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.boton_ventana_barra:hover {
+    border-color: #D9BD7A;
+}
+
+.boton_ventana_barra.activa {
+    background-color: #315D6B;
+    border-color: #D9BD7A;
+}
+
+
+/* ========================================
+   VENTANA SOBRE MÍ
+======================================== */
+
+#ventana_sobre_mi {
+    width: min(750px, 95%);
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#ventana_sobre_mi[hidden] {
+    display: none;
+}
+
+#ventana_sobre_mi .barra_ventana {
+    flex-shrink: 0;
+}
+
+.sobre_mi_contenido {
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.seccion_sobre_mi {
+    margin-bottom: 28px;
+}
+
+.seccion_sobre_mi:last-child {
+    margin-bottom: 0;
+}
+
+.seccion_sobre_mi h2 {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #58747A;
+
+    color: #D9BD7A;
+    font-size: 18px;
+}
+
+.seccion_sobre_mi h3 {
+    margin: 18px 0 10px;
+    color: #A6B8BE;
+    font-size: 13px;
+}
+
+.seccion_sobre_mi p {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.seccion_sobre_mi strong {
+    color: #D9BD7A;
+}
+
+/* COMPETENCIAS TÉCNICAS */
+
+.lista_competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lista_competencias span {
+    padding: 7px 12px;
+
+    background-color: #102532;
+    border: 1px solid #58747A;
+    color: #F1EBD9;
+
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/* VENTANA DE CONTACTO */
+
+.contacto_contenido h2 {
+    margin-top: 0;
+    color: #F1EBD9;
+}
+
+.contacto_contenido p {
+    line-height: 1.6;
+}
+
+.datos_contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.dato_contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-wrap: anywhere;
+}
+
+.etiqueta_contacto {
+    color: #D9BD7A;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.dato_contacto a {
+    color: #F1EBD9;
+    text-decoration: none;
+}
+
+.dato_contacto a:hover {
+    color: #D9BD7A;
+    text-decoration: underline;
+}
+
+/* BOTÓN PORTFOLIO HÉCTOR */
+
+.boton_inicio {
+    color: #F1EBD9;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+/* VENTANA ACERCA DE HEC.OS */
+
+.acerca_contenido h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #D9BD7A;
+    letter-spacing: 2px;
+}
+
+.acerca_contenido > p {
+    line-height: 1.6;
+}
+
+.acerca_detalles {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #58747A;
+    background-color: #102532;
+}
+
+.acerca_detalles p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.acerca_detalles strong {
+    color: #D9BD7A;
+}
+
+.copyright {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #58747A;
+    text-align: center;
+    font-size: 12px;
+    color: #A6B8BE;
+}
+
+
+/* ========================================
+   EXPLORADOR DE PROYECTOS
+======================================== */
+
+.proyectos_contenido {
+    padding: 0;
+    color: #F1EBD9;
+}
+
+/* Ruta superior */
+
+.ruta_proyectos {
+    padding: 10px 15px;
+    background-color: #102532;
+    border-bottom: 1px solid #58747A;
+    color: #D9BD7A;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+/* Distribución del explorador */
+
+.explorador_proyectos {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    min-height: 310px;
+}
+
+/* Columna izquierda */
+
+.lista_proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px 10px;
+    background-color: #102532;
+    border-right: 1px solid #58747A;
+}
+
+.lista_proyectos h3 {
+    margin: 0 0 10px;
+    color: #D9BD7A;
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.elemento_proyecto {
+    width: 100%;
+    padding: 10px 8px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #F1EBD9;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.elemento_proyecto:hover {
+    background-color: #234A58;
+}
+
+.elemento_proyecto.seleccionado {
+    background-color: #234A58;
+    border-color: #D9BD7A;
+}
+
+/* Columna derecha */
+
+.detalle_proyectos {
+    min-width: 0;
+    padding: 20px;
+}
+
+.ficha_proyecto h3 {
+    margin: 0 0 10px;
+    color: #D9BD7A;
+    font-size: 20px;
+}
+
+.ficha_proyecto h4 {
+    margin: 20px 0 8px;
+    color: #D9BD7A;
+    font-size: 13px;
+}
+
+.ficha_proyecto p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.tipo_proyecto {
+    color: #A6B8BE;
+    font-size: 12px !important;
+}
+
+.estado_proyecto {
+    margin-top: 20px;
+    color: #A6B8BE;
+    font-style: italic;
+}
+
+/* Enlaces */
+
+.enlaces_proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.enlaces_proyecto a {
+    display: inline-block;
+    padding: 9px 12px;
+    border: 1px solid #D9BD7A;
+    background-color: #234A58;
+    color: #F1EBD9;
+    font-family: monospace;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.enlaces_proyecto a:hover {
+    background-color: #D9BD7A;
+    color: #07152F;
+}
+
+/* Barra inferior */
+
+.estado_explorador {
+    padding: 8px 15px;
+    background-color: #102532;
+    border-top: 1px solid #58747A;
+    color: #A6B8BE;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+#ventana_proyectos {
+    width: min(750px, 95%);
+}
+.ficha_proyecto[hidden] {
+    display: none;
+}
+
+
+/* ========================================
+   CARTEL DE BIENVENIDA
+======================================== */
+
+.cartel_bienvenida {
+    position: absolute;
+    top: 80px;
+    right: 8%;
+    left: auto;
+    width: min(280px, 25%);
+    aspect-ratio: 1;
+    z-index: 2;
+
+    transform-origin: top center;
+    animation: bajarCartel 1.5s ease-out both;
+}
+
+.cartel_bienvenida img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.texto_cartel {
+    position: absolute;
+    top: 24%;
+    left: 15%;
+    width: 70%;
+    height: 55%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #183A80;
+    font-family: "Indie Flower", cursive;
+}
+
+.texto_cartel h1 {
+    margin: 0 0 8px;
+    font-size: clamp(28px, 2.2vw, 36px);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+.texto_cartel p {
+    margin: 0;
+    font-size: clamp(23px, 1.8vw, 30px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* POST-IT DE RECORDATORIO */
+
+.postit_recordatorio {
+    position: absolute;
+    right: 8%;
+    bottom: 350px;
+    width: min(280px, 25%);
+    aspect-ratio: 1;
+    z-index: 2;
+
+    transform-origin: center;
+    animation: entrarRecordatorio 1.2s ease-out 15s both;
+}
+
+.postit_recordatorio img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.texto_recordatorio {
+    position: absolute;
+    top: 24%;
+    left: 15%;
+    width: 70%;
+    height: 55%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    text-align: center;
+    color: #183A80;
+    font-family: "Indie Flower", cursive;
+}
+
+.texto_recordatorio h2 {
+    margin: 0;
+    font-size: clamp(24px, 2vw, 32px);
+    line-height: 1;
+}
+
+.texto_recordatorio p {
+    margin: 0;
+    font-size: clamp(17px, 1.4vw, 23px);
+    line-height: 1.1;
+}
+
+.texto_recordatorio span {
+    font-size: clamp(17px, 1.3vw, 22px);
+    text-decoration: underline;
+}
+
+/* CRÉDITOS DE LOS RECURSOS */
+
+.creditos_assets {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #58747A;
+}
+
+.creditos_assets h3 {
+    color: #D9BD7A;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.creditos_assets p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.creditos_assets a {
+    color: #D9BD7A;
+    text-decoration: none;
+}
+
+.creditos_assets a:hover {
+    text-decoration: underline;
+}
+
+/* Animación de entrada */
+
+@keyframes bajarCartel {
+    0% {
+        transform: translateY(-130%) rotate(-12deg);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(12px) rotate(2deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(-5px) rotate(-7deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-5deg);
+        opacity: 1;
+    }
+}
+
+@keyframes entrarRecordatorio {
+    0% {
+        opacity: 0;
+        transform: translateX(120vw) rotate(20deg);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateX(-15px) rotate(2deg);
+    }
+
+    90% {
+        transform: translateX(5px) rotate(7deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(5deg);
+    }
+}
+
+
+/* ========================================
+   ADAPTACIÓN A PANTALLAS PEQUEÑAS
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* ICONOS DEL ESCRITORIO */    
+
+    .acceso_directo {
+        width: 85px;
+        font-size: 12px;
+    }
+
+    .acceso_directo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* POST-ITS */
+
+    .cartel_bienvenida {
+        top: 12px;
+        right: 3%;
+        width: 37%;
+    }
+
+    .postit_recordatorio {
+        right: 3%;
+        bottom: 110px;
+        width: 37%;
+    }
+
+    .texto_cartel h1 {
+        font-size: clamp(12px, 3vw, 17px);
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .texto_cartel p {
+        font-size: clamp(11px, 2.5vw, 15px);
+    }
+
+    .texto_recordatorio h2 {
+        font-size: clamp(12px, 3vw, 17px);
+    }
+
+    .texto_recordatorio p {
+        font-size: clamp(10px, 2.4vw, 14px);
+    }
+
+    .texto_recordatorio span {
+        font-size: clamp(10px, 2.4vw, 14px);
+    }
+
+    /* EXPLORADOR DE PROYECTOS */
+
+    .explorador_proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .lista_proyectos {
+        border-right: none;
+        border-bottom: 1px solid #58747A;
+    }
+
+    .detalle_proyectos {
+        padding: 15px;
+    }
+
+    /* BARRA DE TAREAS */
+
+    .barra_tareas {
+        padding: 0 8px;
+        gap: 6px;
+    }
+
+    .boton_inicio {
+        padding: 5px 7px;
+        gap: 5px;
+    }
+
+    .icono_inicio {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nombre_sistema {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+
+    .ventanas_barra {
+        margin-left: 0;
+        gap: 4px;
+    }
+
+    .boton_ventana_barra {
+        width: 30px;
+        height: 30px;
+    }
+
+    .boton_ventana_barra img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .informacion_sistema {
+        gap: 4px;
+    }
+
+    .tiempo_sistema {
+        font-size: 11px;
+        padding: 3px;
+    }
+
+    .reloj_sistema {
+        padding: 4px;
+        font-size: 10px;
+    }
+}
+
+/* ========================================
+   ORIENTACIÓN VERTICAL
+======================================== */
+
+@media (orientation: portrait) {
+
+    .fondo_escritorio {
+        background-size: cover;
+        background-position: 10% center;
+    }
+}
+
+/* ========================================
+   ACCESIBILIDAD
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cartel_bienvenida {
+        animation: none;
+    }
+}
+
+
+
+/* ========================================
+   CUADRÍCULA UNIFORME: TODA LA PANTALLA
+   La barra de tareas queda fuera del área.
+======================================== */
+.iconos_escritorio {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    pointer-events: none;
+}
+
+.iconos_escritorio .acceso_directo {
+    position: absolute;
+    width: 90px;
+    height: 96px;
+    min-height: 96px;
+    margin: 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    touch-action: none;
+    user-select: none;
+    cursor: grab;
+}
+
+.iconos_escritorio .acceso_directo:active { cursor: grabbing; }
+.iconos_escritorio .acceso_directo img { pointer-events: none; user-select: none; }
+.iconos_escritorio .acceso_directo span { pointer-events: none; }
+
+@media (max-width: 600px) {
+    .iconos_escritorio .acceso_directo {
+        width: 85px;
+        height: 90px;
+        min-height: 90px;
+    }
+}

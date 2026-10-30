@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héctor Mateos Bravo | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>    
+    
+    <main class="escritorio">        
+        
+        <section class="fondo_escritorio">
+            
+            <div class="cartel_bienvenida">
+                <img src="img/post_it.png" alt="">
+
+                <div class="texto_cartel">
+                    <h1>¡BIENVENIDO A MI PORTFOLIO!</h1>
+                    <p>Explora mis proyectos</p>
+                </div>
+            </div>
+
+            <!-- NOTA DE RECORDATORIO -->
+            <div class="postit_recordatorio">
+                <img src="img/post_it.png" alt="">
+
+                <div class="texto_recordatorio">
+                    <h2>¡URGENTE!</h2>
+                    <p>
+                        Contratar a Héctor Mateos Bravo
+                        antes de que se nos adelanten.
+                    </p>
+                    <span>¡No olvidar!</span>
+                </div>
+            </div>
+
+            <div class="iconos_escritorio">                
+                
+                <button type="button" class="acceso_directo"
+                        data-ventana="ventana_proyectos">
+                    <img src="img/iconos/folder.png" alt="">
+                    <span>Proyectos</span>
+                </button>
+                
+                <button type="button" class="acceso_directo"
+                        data-ventana="ventana_sobre_mi">
+                    <img src="img/iconos/character.png" alt="">
+                    <span>Sobre mí</span>
+                </button>                
+                
+                <button type="button" class="acceso_directo"
+                        data-ventana="ventana_curriculum">
+                    <img src="img/iconos/script.png" alt="">
+                    <span>Currículum</span>
+                </button>
+                
+                <button type="button" class="acceso_directo"
+                        data-ventana="ventana_videocurriculum">
+                    <img src="img/iconos/camera.png" alt="">
+                    <span>Videocurrículum</span>
+                </button>
+
+                <button type="button" class="acceso_directo"
+                        data-ventana="ventana_contacto">
+                    <img src="img/iconos/Letter.png" alt="">
+                    <span>Contacto</span>
+                </button>
+
+                <button type="button" class="acceso_directo papelera_escritorio"
+                        data-ventana="ventana_papelera">
+                    <img src="img/iconos/Trashbin.png" alt="">
+                    <span>Papelera</span>
+                </button>
+            </div>
+
+            <div class="ventana" id="ventana_proyectos" hidden>
+                
+                <div class="barra_ventana">
+                    <span>Proyectos</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenido_ventana proyectos_contenido">
+
+                    <div class="ruta_proyectos">
+                        <span>PORTFOLIO / Proyectos</span>
+                    </div>
+
+                    <div class="explorador_proyectos">
+
+                        <!-- LISTA DE PROYECTOS -->
+                        <nav class="lista_proyectos" aria-label="Lista de proyectos">
+
+                            <h3>MIS PROYECTOS</h3>
+
+                            <button type="button" class="elemento_proyecto seleccionado"
+                                    data-proyecto="placidia">
+                                📁 El Taller de Placidia
+                            </button>
+
+                            <button type="button" class="elemento_proyecto"
+                                    data-proyecto="portfolio">
+                                📁 Portfolio de Héctor
+                            </button>
+
+                            <button type="button" class="elemento_proyecto"
+                                    data-proyecto="verano">
+                                📁 Un verano en el pueblo
+                            </button>
+
+                        </nav>
+
+                        <!-- INFORMACIÓN DE LOS PROYECTOS -->
+                        <div class="detalle_proyectos">
+
+                            <!-- EL TALLER DE PLACIDIA -->
+                            <article class="ficha_proyecto" id="proyecto_placidia">
+
+                                <h3>El Taller de Placidia</h3>
+
+                                <p class="tipo_proyecto">
+                                    Proyecto académico · 1.º de DAM
+                                </p>
+
+                                <p>
+                                    Página web desarrollada durante el primer curso
+                                    del Grado Superior en Desarrollo de Aplicaciones
+                                    Multiplataforma.
+                                </p>
+
+                                <h4>Tecnologías</h4>
+                                <p>HTML · CSS</p>
+
+                                <div class="enlaces_proyecto">
+                                    <a href="https://eltallerdeplacidia.netlify.app/"
+                                    target="_blank" rel="noopener noreferrer">
+                                        Ver página web
+                                    </a>
+                                </div>
+
+                            </article>
+
+                            <!-- PORTFOLIO -->
+                            <article class="ficha_proyecto" id="proyecto_portfolio" hidden>
+
+                                <h3>Portfolio de Héctor</h3>
+
+                                <p class="tipo_proyecto">
+                                    Proyecto personal
+                                </p>
+
+                                <p>
+                                    Portfolio interactivo inspirado en los sistemas
+                                    operativos clásicos, con escritorio, ventanas
+                                    arrastrables y funcionalidades dinámicas.
+                                </p>
+
+                                <h4>Tecnologías</h4>
+                                <p>HTML · CSS · JavaScript</p>
+
+                                <p class="estado_proyecto">
+                                    Proyecto en desarrollo
+                                </p>
+
+                            </article>
+
+                            <!-- UN VERANO EN EL PUEBLO -->
+                            <article class="ficha_proyecto" id="proyecto_verano" hidden>
+
+                                <h3>Un verano en el pueblo</h3>
+
+                                <p class="tipo_proyecto">
+                                    Proyecto personal · Videojuego 2D
+                                </p>
+
+                                <p>
+                                    Videojuego ambientado en un pueblo de Zamora,
+                                    inspirado en recuerdos de infancia y desarrollado
+                                    con ilustraciones originales.
+                                </p>
+
+                                <h4>Tecnologías</h4>
+                                <p>Java · LibGDX</p>
+
+                                <p class="estado_proyecto">
+                                    Proyecto en desarrollo
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                    <div class="estado_explorador">
+                        3 proyectos
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="ventana" id="ventana_sobre_mi" hidden>
+                
+                <div class="barra_ventana">
+                    <span>Sobre mí</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenido_ventana sobre_mi_contenido">
+
+                    <!-- PERFIL PROFESIONAL -->
+                    <section class="seccion_sobre_mi">
+                        <h2>Perfil profesional</h2>
+
+                        <p>
+                            Soy estudiante del Grado Superior en Desarrollo de
+                            Aplicaciones Multiplataforma (DAM), actualmente
+                            enfocado en iniciar mi carrera profesional como
+                            desarrollador de software.
+                        </p>
+
+                        <p>
+                            Mi trayectoria profesional incluye más de 20 años
+                            de experiencia en el sector tecnológico, principalmente
+                            en la comercialización de productos tecnológicos,
+                            atención al cliente y gestión operativa.
+                            También he trabajado en startups tecnológicas,
+                            participando en tareas de administración,
+                            coordinación y gestión de clientes.
+                        </p>
+
+                        <p>
+                            Esta experiencia me ha permitido desarrollar
+                            habilidades como la resolución de problemas,
+                            el trabajo en equipo, la comunicación, la organización
+                            y la capacidad de adaptación. También he participado
+                            en la formación de nuevos compañeros y en la gestión
+                            de diferentes procesos de trabajo.
+                        </p>
+                    </section>
+
+                    <!-- COMPETENCIAS TÉCNICAS -->
+                    <section class="seccion_sobre_mi">
+                        <h2>Competencias técnicas</h2>
+
+                        <h3>Lenguajes y tecnologías</h3>
+
+                        <div class="lista_competencias">
+                            <span>Java</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>SQL</span>
+                        </div>
+
+                        
+                        <h3>Herramientas y entornos</h3>
+
+                        <div class="lista_competencias">
+                            <span>Visual Studio Code</span>
+                            <span>Apache NetBeans</span>
+                            <span>IntelliJ IDEA</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>LibGDX</span>
+                        </div>
+
+                        <h3>Herramientas en formación</h3>
+
+                        <div class="lista_competencias">
+                            <span>Eclipse IDE</span>
+                            <span>Android Studio</span>
+                        </div>
+
+                    </section>
+
+                    <!-- PROYECTOS Y APRENDIZAJE -->
+                    <section class="seccion_sobre_mi">
+                        <h2>Proyectos y aprendizaje</h2>
+
+                        <p>
+                            Actualmente estoy ampliando mis competencias
+                            técnicas mediante el desarrollo de aplicaciones
+                            y proyectos propios, profundizando en programación
+                            orientada a objetos, bases de datos y herramientas
+                            de desarrollo.
+                        </p>
+
+                        <p>
+                            Entre mis proyectos destaca
+                            <strong>Un verano en el pueblo</strong>,
+                            un videojuego 2D desarrollado con Java y LibGDX
+                            que me permite aplicar conocimientos de programación
+                            y afrontar nuevos retos técnicos.
+                        </p>
+                    </section>
+
+                    <!-- OBJETIVO PROFESIONAL -->
+                    <section class="seccion_sobre_mi">
+                        <h2>Objetivo profesional</h2>
+
+                        <p>
+                            Mi objetivo es incorporarme a un equipo de desarrollo
+                            donde pueda seguir aprendiendo, aportar mis
+                            conocimientos técnicos y aprovechar la experiencia
+                            profesional adquirida durante mi trayectoria anterior.
+                        </p>
+                    </section>
+
+                </div>
+
+
+            </div>
+            
+            <div class="ventana" id="ventana_curriculum" hidden>
+                
+                <div class="barra_ventana">
+                    <span>Currículum</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contenido_ventana">
+                    <h2>Mi currículum</h2>
+                    <p>Aquí encontrarás mi formación y experiencia profesional.</p>
+                </div>
+
+            </div>
+            
+            <div class="ventana" id="ventana_videocurriculum" hidden>
+                
+                <div class="barra_ventana">
+                    <span>Videocurrículum</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contenido_ventana">
+                    <h2>Mi videocurrículum</h2>
+                    <p>Próximamente podrás conocerme a través de un vídeo.</p>
+                </div>
+
+            </div>
+            
+            <div class="ventana" id="ventana_contacto" hidden>
+                
+                <div class="barra_ventana">
+                    <span>Contacto</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenido_ventana contacto_contenido">
+
+                    <h2>¿Hablamos?</h2>
+
+                    <p>
+                        ¿Tienes una oportunidad laboral, quieres crear un proyecto o
+                        simplemente quieres contactar conmigo?
+                    </p>
+
+                    <div class="datos_contacto">
+
+                        <div class="dato_contacto">
+                            <span class="etiqueta_contacto">CORREO ELECTRÓNICO</span>
+                            <a href="mailto:h.mateosbravo@gmail.com">
+                                h.mateosbravo@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="dato_contacto">
+                            <span class="etiqueta_contacto">LINKEDIN</span>
+                            <a href="https://www.linkedin.com/in/h%C3%A9ctor-juli%C3%A1n-mateos-bravo-b6ba6628b/"
+                            target="_blank" rel="noopener noreferrer">
+                                Ver perfil de LinkedIn
+                            </a>
+                        </div>
+
+                        <div class="dato_contacto">
+                            <span class="etiqueta_contacto">GITHUB</span>
+                            <a href="https://github.com/HecMB82"
+                            target="_blank" rel="noopener noreferrer">
+                                Ver perfil de GitHub
+                            </a>
+                        </div>
+
+                        <div class="dato_contacto">
+                            <span class="etiqueta_contacto">UBICACIÓN</span>
+                            <span>Madrid, España · Disponible para remoto</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="ventana" id="ventana_acerca_de" hidden>
+
+                <div class="barra_ventana">
+                    <span>Acerca de PORTFOLIO DE HÉCTOR</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contenido_ventana acerca_contenido">
+                    <h2>PORTFOLIO DE HÉCTOR</h2>
+
+                    <p>Creative Developer System</p>
+
+                    <p>
+                        Portfolio personal interactivo inspirado
+                        en los sistemas operativos clásicos.
+                    </p>
+
+                    <div class="acerca_detalles">
+                        <p><strong>Desarrollado por:</strong> Héctor Julián Mateos Bravo</p>
+                        <p><strong>Versión:</strong> 1.0</p>
+                        <p><strong>Tecnologías:</strong> HTML, CSS y JavaScript</p>
+                    </div>
+                    
+                    <!-- CRÉDITOS DE LOS RECURSOS GRÁFICOS -->
+                    <div class="creditos_assets">
+                        <h3>CRÉDITOS Y RECURSOS GRÁFICOS</h3>
+
+                        <p>
+                            <strong>Fondo del escritorio:</strong><br>
+                            <a href="https://free-game-assets.itch.io/nature-landscapes-free-pixel-art"
+                            target="_blank" rel="noopener noreferrer">
+                                Nature Landscapes Free Pixel Art — CraftPix / Free Game Assets
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>Iconos del escritorio:</strong><br>
+                            <a href="https://zeromatrix.itch.io/rpgiab-icons"
+                            target="_blank" rel="noopener noreferrer">
+                                Justin's 16x16 Icon Pack — Justin Arnold
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>Iconos adicionales:</strong><br>
+                            <a href="https://crusenho.itch.io/icons-essential-pack-free-icons"
+                            target="_blank" rel="noopener noreferrer">
+                                Icons Essential Pack — Crusenho
+                            </a>
+                        </p>
+
+                        <p>
+                            Los iconos de Justin Arnold y Crusenho se utilizan
+                            bajo licencia
+                            <a href="https://creativecommons.org/licenses/by/4.0/"
+                            target="_blank" rel="noopener noreferrer">
+                                Creative Commons CC BY 4.0
+                            </a>.
+                            Recursos gráficos originales, sin modificaciones.
+                        </p>
+
+                        <p>
+                            <strong>Tipografía manuscrita:</strong><br>
+                            <a href="https://fonts.google.com/specimen/Indie+Flower"
+                            target="_blank" rel="noopener noreferrer">
+                                Indie Flower — Google Fonts
+                            </a>
+                        </p>
+                    </div>
+
+                    <p class="copyright">
+                        © 2026 Héctor Julián Mateos Bravo
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- VENTANA DE LA PAPELERA -->
+            <div class="ventana" id="ventana_papelera" hidden>
+
+                <div class="barra_ventana">
+                    <span>Papelera</span>
+
+                    <div class="controles_ventana">
+                        <button type="button" class="minimizar_ventana"
+                                aria-label="Minimizar ventana">
+                            −
+                        </button>
+
+                        <button type="button" class="cerrar_ventana"
+                                aria-label="Cerrar ventana">
+                            ×
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contenido_ventana">
+                    <h2>😱 ¡Un momento!</h2>
+
+                    <p>
+                        ¿No estarás pensando en tirar mi portfolio
+                        a la papelera?
+                    </p>
+
+                    <p>
+                        ¡Con lo que me ha costado hacerlo!
+                        😂
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <footer class="barra_tareas">
+            
+            <button type="button" class="boton_inicio"
+                    data-ventana="ventana_acerca_de">
+
+                <img src="img/iconos/information.png"
+                    alt=""
+                    class="icono_inicio">
+
+                <span class="nombre_sistema">
+                    PORTFOLIO
+                    <span>DE HÉCTOR</span>
+                </span>
+
+            </button>
+
+            <div class="ventanas_barra" id="ventanas_barra"></div>
+
+            <div class="informacion_sistema">
+                
+                <button class="tiempo_sistema" id="boton_tiempo"
+                        type="button" title="Tiempo de Madrid. Haz clic para consultar el de tu ubicación">
+                    <span id="icono_tiempo">☀</span>
+                    <span id="temperatura">--°C</span>
+                </button>
+
+
+                <div class="reloj_sistema">
+                    <span id="hora">--:--</span>
+                    <span id="fecha">--/--/----</span>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
