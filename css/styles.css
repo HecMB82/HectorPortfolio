@@ -943,58 +943,68 @@ button.acceso_directo:hover {
         height: 42px;
     }
 
-    /* POST-ITS */
+    /* POST-ITS: TRES NOTAS COMPACTAS EN PANTALLAS PEQUEÑAS */
 
     .cartel_bienvenida {
-        top: 12px;
+        top: 10px;
         right: 3%;
-        width: 37%;
+        width: 29%;
     }
 
     .postit_presentacion {
-        top: 34%;
-        right: 43%;
-        width: 37%;
+        top: 28%;
+        right: 13%;
+        width: 29%;
     }
 
     .postit_recordatorio {
+        top: 52%;
         right: 3%;
-        bottom: 95px;
-        width: 37%;
+        bottom: auto;
+        width: 29%;
+    }
+
+    .texto_presentacion {
+        gap: 2px;
     }
 
     .texto_presentacion h2 {
-        font-size: clamp(16px, 4vw, 23px);
+        font-size: clamp(13px, 3.2vw, 19px);
     }
 
-    .texto_presentacion p {
-        font-size: clamp(13px, 3.1vw, 19px);
+    .texto_presentacion p,
+    .texto_presentacion .presentacion_me_llamo {
+        font-size: clamp(11px, 2.8vw, 16px);
     }
 
     .texto_presentacion .presentacion_nombre {
-        font-size: clamp(12px, 3vw, 18px);
+        font-size: clamp(10px, 2.6vw, 16px);
     }
 
     .texto_cartel h1 {
-        font-size: clamp(12px, 3vw, 17px);
+        font-size: clamp(11px, 2.7vw, 16px);
         line-height: 1;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
     }
 
     .texto_cartel p {
-        font-size: clamp(11px, 2.5vw, 15px);
+        font-size: clamp(10px, 2.4vw, 14px);
+    }
+
+    .texto_recordatorio {
+        gap: 2px;
     }
 
     .texto_recordatorio h2 {
-        font-size: clamp(12px, 3vw, 17px);
+        font-size: clamp(11px, 2.8vw, 16px);
     }
 
     .texto_recordatorio p {
-        font-size: clamp(10px, 2.4vw, 14px);
+        font-size: clamp(9px, 2.2vw, 13px);
     }
 
     .texto_recordatorio span {
-        font-size: clamp(10px, 2.4vw, 14px);
+        font-size: clamp(9px, 2.2vw, 13px);
     }
 
     /* EXPLORADOR DE PROYECTOS */
